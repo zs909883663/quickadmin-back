@@ -1,0 +1,10 @@
+/.idea
+/.vscode
+*.log
+.env
+.htaccess
+nginx.htaccess
+/runtime
+/public/storage
+/vendor/
+composer.lock

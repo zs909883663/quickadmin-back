@@ -1,37 +1,131 @@
-# quickadmin-back
+<p align="center">
+	<img alt="logo" width="80" src="https://www.quickadmin.icuapi.njyyc.cn/storage/system/20211125/d26de224f0e4e4e2851345c7f16bc0e7.png">
+</p>
+<h1 align="center" style="margin: 10px 0; font-weight: bold;">QuickAdmin 低代码平台</h1>
 
-#### 介绍
-quickadmin后台项目
+当前为后台项目，前端项目请移步 [https://gitee.com/zszone/quickadmin-front.git](https://gitee.com/zszone/quickadmin-front.git)
 
-#### 软件架构
-软件架构说明
+## 简介
 
+QuickAdmin 是一款基于代码生成器的低代码开发平台，通用型后台管理模板，界面美观、开箱即用，拥有丰富的扩展组件和模板页面，适合各类中后台应用，无需(或少量)写代码！帮助解决 PHP 前后端分离项目 70%的重复工作，让开发更多关注业务逻辑。在线 CURD 表单配置、丰富的插件市场等等！
 
-#### 安装教程
+采用前后端分离架构：ThinkPHP 6.x，ElementUI&&Vue 2.x，AntV-G2。
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## 相关文档
 
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+-   开发文档：[http://doc.quickadmin.icu](https://doc.quickadmin.icu)
+-   QuickAdmin 官网：[https://www.quickadmin.icu](https://www.quickadmin.icu)
+-   在线演示：[http://demo.quickadmin.icu](https://demo.quickadmin.icu)
 
 
-#### 特技
+## 安装使用
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+### 后台
+
+- 1.将下载下来的后端包放到站点目录
+- 2.安装依赖 composer install
+- 3.导入db文件下的init.sql数据库
+- 4.复制.example.env 命名为.env修改数据库连接信息 和前端项目名称
+- 5.添加站点并绑定public目录为运行目录
+- 6.访问项目admin模块，如：http://demo-api.quickadmin.icu/admin 如果出现 quickadmin api is ok,表示后台安装成功
+
+### 前端
+```bash
+# 进入项目目录
+cd quickAdmin-front
+
+# 安装依赖
+npm install
+
+# 启动服务
+npm run dev
+```
+
+> 浏览器访问 http://localhost:80
+
+#### 发布
+
+```bash
+# 构建测试环境
+npm run build:stage
+
+# 构建生产环境
+npm run build:prod
+```
+
+## 内置功能模块
+
+> -   角色组管理
+> -   管理员管理
+> -   菜单管理
+> -   系统配置
+> -   日志管理
+> -   附件管理
+> -   表单案例
+> -   Online 代码生成
+> -   插件市场
+
+## 项目目录
+
+```
+├─首页
+│  ├─首页（常见图表形态展示）
+├─系统管理
+│  ├─角色组管理
+│  ├─管理员管理
+│  ├─菜单管理（支持按钮权限、数据权限）
+│  ├─系统配置
+│  │  ├─基础配置
+│  │  ├─上传配置（本地、阿里oss,七牛oss,腾讯oss）
+│  └─日志管理
+├─系统工具
+│  ├─附件管理
+├─常用案例
+│  ├─表单测试案例（打印、编辑、字段显隐）
+│  ├─tab状态检索案例
+│  ├─商品管理案例
+│  ├─exp案例
+│─Online在线编辑（控制字段禁用、隐藏、类型）
+│  └─列表显示
+│  └─字段备注
+│  └─控件类型
+│  └─控件字典
+│  └─是否查询
+│  └─添加显示
+│  └─编辑显示
+│  └─是否只读
+│  └─是否必填
+│  └─验证规则
+│  └─关联表追加
+│─插件市场
+│  ├─小组件
+│  └─完整应用
+└─更多功能开发中。。
+
+```
+
+## 系统演示截图
+
+[![O1Sv4g.png](https://s1.ax1x.com/2022/05/08/O1Sv4g.png)](https://s1.ax1x.com/2022/05/08/O1Sv4g.png)
+[![O1SzCQ.png](https://s1.ax1x.com/2022/05/08/O1SzCQ.png)](https://s1.ax1x.com/2022/05/08/O1SzCQ.png)
+[![O1SXE8.png](https://s1.ax1x.com/2022/05/08/O1SXE8.png)](https://s1.ax1x.com/2022/05/08/O1SXE8.png)
+[![O1SjUS.png](https://s1.ax1x.com/2022/05/08/O1SjUS.png)](https://s1.ax1x.com/2022/05/08/O1SjUS.png)
+[![O1SLHf.png](https://s1.ax1x.com/2022/05/08/O1SLHf.png)](https://s1.ax1x.com/2022/05/08/O1SLHf.png)
+
+## 在线体验
+
+> -   https://demo.quickadmin.icu
+> -   user: admin
+> -   pwd:123456
+
+## 特别鸣谢
+
+建议在开发前先学一下以下内容，提前了解和学习这些知识，会对项目理解非常有帮助:
+
+-   [Vue2 文档](https://cn.vuejs.org/v2/guide/)
+-   [Vuex 状态管理](https://vuex.vuejs.org/zh/)
+-   [Vue-cli](https://cli.vuejs.org/zh/config/)
+-   [Vue-router](https://next.router.vuejs.org/)
+-   [Element-ui-Vue](https://element.eleme.cn/#/zh-CN/component/installation)
+-   [Es6](https://es6.ruanyifeng.com/)
+-   [Thinkphp6](https://www.kancloud.cn/manual/thinkphp6_0/1037479/)
