@@ -1,6 +1,7 @@
 /*
 将初始化数据导入建好的数据库中
-Date: 2022-05-12 23:28:07
+
+Date: 2022-05-13 11:04:28
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -110,7 +111,7 @@ CREATE TABLE `qu_example_orders` (
 INSERT INTO `qu_example_orders` VALUES ('1', 'DD20220329', '500.00', '这是一个测试订单', 'YQ1235', '2022-04-20 12:01:40', '2022-04-29 16:18:55', '3');
 INSERT INTO `qu_example_orders` VALUES ('2', 'DD202204121255', '299.00', '这是一个测试的订单', 'SF12345678', '2022-04-20 12:02:33', '2022-04-20 19:16:00', '3');
 INSERT INTO `qu_example_orders` VALUES ('3', 'DD20220422', '366.00', '送到物业', '', '2022-04-20 12:03:22', '2022-04-29 16:18:38', '1');
-INSERT INTO `qu_example_orders` VALUES ('4', 'DD998888', '58.00', '尽快发货', 'ST0098787', '2022-04-20 12:03:46', '2022-04-29 16:18:25', '3');
+INSERT INTO `qu_example_orders` VALUES ('4', 'DD998888', '58.00', '尽快发货', 'ST0098787', '2022-04-20 12:03:46', '2022-05-13 10:03:01', '3');
 
 -- ----------------------------
 -- Table structure for `qu_system_admin`
@@ -208,12 +209,12 @@ INSERT INTO `qu_system_config` VALUES ('2', 'site_title', '网站标题', 'site'
 INSERT INTO `qu_system_config` VALUES ('3', 'site_copyright', '版权信息', 'site', 'input', '©版权所有 2020-2021 xxx版权所有', '网站的版权', '0', null, null);
 INSERT INTO `qu_system_config` VALUES ('4', 'site_beian', '备案信息', 'site', 'input', '苏ICP备xxxxx号', '网站备案信息', '0', null, null);
 INSERT INTO `qu_system_config` VALUES ('5', 'upload_ext', '允许后缀', 'upload', '', 'doc,gif,ico,icon,jpg,mp3,mp4,p12,pem,png,rar,jpeg', '上传允许的后缀', '0', null, null);
-INSERT INTO `qu_system_config` VALUES ('6', 'upload_url', '图片路径', 'upload', '', 'http://quickadmin-prod.demo.com', '上传文件访问地址', '0', null, null);
+INSERT INTO `qu_system_config` VALUES ('6', 'upload_url', '图片路径', 'upload', '', '', '上传文件访问地址', '0', null, null);
 INSERT INTO `qu_system_config` VALUES ('7', 'site_switch', '网站开关', 'site', '', '1', '网站是否关闭', '0', null, null);
 INSERT INTO `qu_system_config` VALUES ('8', 'site_ip_blacklist', 'ip黑名单', 'site', '', '2223.8.9,127.0.0.1,211.234.98.112', 'ip黑名单用逗号隔开', '0', null, null);
 INSERT INTO `qu_system_config` VALUES ('9', 'site_open_time', '网站维护时间', 'site', '', '6,7,5', '网站维护时间', '0', null, null);
 INSERT INTO `qu_system_config` VALUES ('10', 'site_isreg', '允许注册', 'site', '', '1', '是否允许注册', '0', null, null);
-INSERT INTO `qu_system_config` VALUES ('11', 'upload_type', '上传方式', 'upload', '', 'alioss', '上传方式', '0', null, null);
+INSERT INTO `qu_system_config` VALUES ('11', 'upload_type', '上传方式', 'upload', '', 'local', '上传方式', '0', null, null);
 INSERT INTO `qu_system_config` VALUES ('12', 'site_back_image', '登录页背景图', 'site', 'image', '', '登录页背景', '0', null, null);
 INSERT INTO `qu_system_config` VALUES ('13', 'site_icon', 'icon', 'site', 'image', '', '网站小icon', '0', null, null);
 
@@ -311,11 +312,12 @@ CREATE TABLE `qu_system_log` (
   `useragent` varchar(255) DEFAULT '' COMMENT 'User-Agent',
   `create_time` datetime DEFAULT NULL COMMENT '操作时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='后台操作日志表';
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='后台操作日志表';
 
 -- ----------------------------
 -- Records of qu_system_log
 -- ----------------------------
+
 
 -- ----------------------------
 -- Table structure for `qu_system_menu`
@@ -443,7 +445,7 @@ CREATE TABLE `qu_test` (
   `category_id` int(11) DEFAULT NULL COMMENT '分类',
   `name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '111',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='案例表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='案例表';
 
 -- ----------------------------
 -- Records of qu_test
