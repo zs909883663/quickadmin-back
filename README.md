@@ -13,9 +13,9 @@ QuickAdmin 是一款基于代码生成器的低代码开发平台，通用型后
 
 ## 相关文档
 
--   开发文档：[http://doc.quickadmin.icu](https://doc.quickadmin.icu)
+-   开发文档：[http://doc.quickadmin.icu](http://doc.quickadmin.icu)
 -   QuickAdmin 官网：[https://www.quickadmin.icu](https://www.quickadmin.icu)
--   在线演示：[http://demo.quickadmin.icu](https://demo.quickadmin.icu)
+-   在线演示：[http://demo.quickadmin.icu](http://demo.quickadmin.icu)
 
 
 ## 安装使用
@@ -116,7 +116,7 @@ npm run build:prod
 
 ## 在线体验
 
-> -   https://demo.quickadmin.icu
+> -   http://demo.quickadmin.icu
 > -   user: admin
 > -   pwd:123456
 
