@@ -32,5 +32,5 @@ return [
     // 不需要验证权限的方法
     'no_auth_node' => [],
     //是否是演示站点
-    'is_demo' => true,
+    'is_demo' => false,
 ];

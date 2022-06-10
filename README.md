@@ -1,5 +1,5 @@
 <p align="center">
-	<img alt="logo" width="80" src="https://www.quickadmin.icuapi.njyyc.cn/storage/system/20211125/d26de224f0e4e4e2851345c7f16bc0e7.png">
+	<img alt="logo" width="80" src="https://static.yxhui.top/logo.png">
 </p>
 <h1 align="center" style="margin: 10px 0; font-weight: bold;">QuickAdmin 低代码平台</h1>
 
@@ -13,9 +13,9 @@ QuickAdmin 是一款基于代码生成器的低代码开发平台，通用型后
 
 ## 相关文档
 
--   开发文档：[http://doc.quickadmin.icu](https://doc.quickadmin.icu)
+-   开发文档：[http://doc.quickadmin.icu](http://doc.quickadmin.icu)
 -   QuickAdmin 官网：[https://www.quickadmin.icu](https://www.quickadmin.icu)
--   在线演示：[http://demo.quickadmin.icu](https://demo.quickadmin.icu)
+-   在线演示：[http://demo.quickadmin.icu](http://demo.quickadmin.icu)
 
 
 ## 安装使用
@@ -30,6 +30,8 @@ QuickAdmin 是一款基于代码生成器的低代码开发平台，通用型后
 - 6.访问项目admin模块，如：http://demo-api.quickadmin.icu/admin 如果出现 quickadmin api is ok,表示后台安装成功
 
 ### 前端
+设置.env（开发环境为.env.development,生产环境为.env.prod） 下的VUE_APP_BASE_URL='后台接口地址',如：VUE_APP_BASE_URL='http://demo-api.quickadmin.icu'
+
 ```bash
 # 进入项目目录
 cd quickAdmin-front
@@ -114,7 +116,7 @@ npm run build:prod
 
 ## 在线体验
 
-> -   https://demo.quickadmin.icu
+> -   http://demo.quickadmin.icu
 > -   user: admin
 > -   pwd:123456
 
