@@ -94,6 +94,7 @@ class AdminBase extends BaseController
                     $where[] = [$key, 'LIKE', "%{$val}"];
                     break;
                 case '%like%':
+                case 'like':
                     $where[] = [$key, 'LIKE', "%{$val}%"];
                     break;
                 case 'like%':
